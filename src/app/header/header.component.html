@@ -1,23 +1,56 @@
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a href="#" class="navbar-brand">Recipe Book</a>
-        </div>
-        <div class="collaspe navbar-collaspse">
-            <ul class="nav navbar-nav">
-                <li><a href="#" (click)="onSelect('recipe')">Recipe</a></li>
-                <li><a href="#" (click)="onSelect('shopping-list')">Shoppping List</a></li>
-            </ul>
-        </div>
-        <ul class="nav navbar-nav  navbar-right">
-            <li class="dropdown" appDropdown>
-                <a href="#" class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Save Data</a></li>
-                    <li><a href="#">Fetch Data</a></li>
-                </ul>
-            </li>
-        </ul>
+<nav class="navbar navbar-expand-lg">
+  <!-- <div class="container-fluid"> -->
+  <div class="navbar-header">
+    <a href="#" class="navbar-brand">Recipe Book</a>
+  </div>
 
-    </div>
+  <div class="collaspe navbar-collaspse">
+    <ul class=" navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link " routerLinkActive="active" routerLink="/recipes"
+          >Recipe</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          routerLinkActive="active"
+          routerLink="/shopping-list"
+          >Shoppping List</a
+        >
+      </li>
+    </ul>
+  </div>
+  <!-- <ul class="nav navbar-nav ml-auto">
+    <li class="nav-link dropdown-toggle" appDropdown>
+      <a href="#" class="dropdown-item" role="button"
+        >Manage <span class="caret"></span
+      ></a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Save Data</a></li>
+        <li><a href="#">Fetch Data</a></li>
+      </ul>
+    </li>
+  </ul> -->
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item dropdown">
+      <button
+        btn
+        btn-primary
+        class="nav-link dropdown-toggle"
+        appDropdown
+        id="navbarDropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Manage
+      </button>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Fetch Data</a>
+        <a class="dropdown-item" href="#">Save Data</a>
+      </div>
+    </li>
+  </ul>
+  <!-- </div> -->
 </nav>
+<!--  data-toggle="dropdown" -->
